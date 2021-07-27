@@ -19,9 +19,9 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features = { "src/test/java/com/bddfinal/features" },
 		// features= {"src//test//java//com//bddfinal//features"},
 //>>>>>>> fc660d8451adb541fe8a140176b7aa80d39dcf58
-		glue = { "com.bddfinal.steps" }, tags = { "@osa" }
-// ,plugin= {"pretty", "json:target/cucumber.json"}
-// ,dryRun=true
+		glue = { "com.bddfinal.steps" }, tags = { "@osa"/*,"@cuny"*/ }
+ ,plugin= {"pretty", "json:target/cucumber.json"}
+ ,dryRun=false
 
 )
 

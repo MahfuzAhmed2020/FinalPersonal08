@@ -6,17 +6,4 @@
       <class name="com.osa.pages.TestRunner"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="com.osa.pages.TestRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="beforeSuite"/>
-          <include name="feature" invocation-numbers="0"/>
-          <include name="afterSuite"/>
-          <include name="tearDownClass"/>
-        </methods>
-      </class> <!-- com.osa.pages.TestRunner -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

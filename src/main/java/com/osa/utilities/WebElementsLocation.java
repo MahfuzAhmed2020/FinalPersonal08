@@ -43,6 +43,7 @@ public class WebElementsLocation {
 			element = dr.findElement(By.tagName(value));
 		} else if (type.toLowerCase().equals("classname")) {
 			element = dr.findElement(By.className(value));
+			
 		}
 		return element;
 	}

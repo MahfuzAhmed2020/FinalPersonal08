@@ -19,25 +19,40 @@ import cucumber.api.java.en.When;
 public class FinalSteps {
 	private static Logger log = Utility.getLog(FinalSteps.class);
 	public WebDriver dr;
+
 	@Given("^I am on \"([^\"]*)\"$")
 	public void i_am_on(String arg1, DataTable table) throws Throwable {
 		List<List<String>> data = table.raw();
 		dr = Browser.openBrowser(data.get(0).get(1));
 		dr.get(data.get(1).get(1));
 	}
-	
-
 	@And("^I click on \"([^\"]*)\"$")
 	public void i_click_on(String arg1, DataTable table) throws Throwable {
 		List<List<String>> data = table.raw();
 		WebElementsLocation.myClick(dr, data.get(0).get(0), data.get(0).get(1));
+		Thread.sleep(3000);
+		
+	}
+	
+	@When("^I send \"([^\"]*)\"and \"([^\"]*)\"$")
+	public void i_send_and(String arg1, String arg2) throws Throwable {
+	    System.out.println("************   "+arg1);
+	    System.out.println("##############  "+arg2);
+	}
+
+	@Then("^I am on Student page$")
+	public void i_am_on_Student_page() throws Throwable {
+		
 	}
 
 	@And("^I enter \"([^\"]*)\"$")
 	public void i_enter(String arg1, DataTable table) throws Throwable {
 		List<List<String>> data = table.raw();
 		WebElementsLocation.typeValue(dr, data.get(0).get(0), data.get(0).get(1), data.get(0).get(2));
-	}
+		Thread.sleep(3000);
+		//WebElementsLocation.typeValue(dr, "xpath", "[//abx]", "friday");
+		
+		}
 
 	@Given("^I verify \"([^\"]*)\"$")
 	public void i_verify(String arg1, DataTable table) throws Throwable {
@@ -45,6 +60,7 @@ public class FinalSteps {
 		Utility.verifyTitle(dr, data.get(0).get(1));
 		System.out.println(data.get(0).get(1));
 		log.info("verifing student page");
+		Thread.sleep(3000);
 	}
 	@Given("^I am on osa homepage$")
 	public void i_am_on_osa_homepage(DataTable table) throws Throwable {

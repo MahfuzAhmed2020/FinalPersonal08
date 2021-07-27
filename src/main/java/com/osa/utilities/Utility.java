@@ -3,6 +3,7 @@ package com.osa.utilities;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 //import org.testng.Assert;
 
 public class Utility {
@@ -22,9 +23,9 @@ public class Utility {
 			log.info("**********The test is passed**************");
 		} else {
 			log.info("The test is Failed");
-			log.info("Expected value is : " + expectedV);
+			log.info("Expected value is : " + expectedV); 
 			log.info("Actual value is : " + actualV);
-			//Assert.assertEquals(actualV, expectedV);
+			Assert.assertEquals(actualV, expectedV);
 		}
 
 }}
