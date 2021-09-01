@@ -31,8 +31,7 @@ public class FinalSteps {
 		List<List<String>> data = table.raw();
 		WebElementsLocation.myClick(dr, data.get(0).get(0), data.get(0).get(1));
 		Thread.sleep(3000);
-		
-	}
+		}
 	
 	@When("^I send \"([^\"]*)\"and \"([^\"]*)\"$")
 	public void i_send_and(String arg1, String arg2) throws Throwable {

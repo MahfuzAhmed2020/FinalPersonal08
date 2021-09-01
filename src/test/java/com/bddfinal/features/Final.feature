@@ -55,7 +55,7 @@ Feature: OSA login Test.
 #
 @cuny
 Scenario: Title of your scenario
-Given I am on cuny homepage
+     #Given I am on cuny homepage
      Given I am on "cuny homepage"
       |browser|firefox|
       |url|https://www.cuny.edu/|
@@ -63,13 +63,12 @@ Given I am on cuny homepage
       |xpath|//a[text()='About']|
      And I click on "Login"
       |xpath|//a[text()='Login']|
-     
-     And I enter "myusername" 
+      And I enter "myusername" 
       |id| CUNYfirstUsernameH|mahfuz23@gmail.com|
   @osa
   Scenario: Title of your scenario
      Given I am on "osa homepage"
-      |browser|firefox|
+      |browser|firefox                      |
       |url|https://www.osaconsultingtech.com|
       
     And I click on "forum button"

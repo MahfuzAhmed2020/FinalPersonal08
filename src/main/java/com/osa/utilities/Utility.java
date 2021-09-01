@@ -28,4 +28,32 @@ public class Utility {
 			Assert.assertEquals(actualV, expectedV);
 		}
 
-}}
+}
+/*
+	
+	//Scrollpage
+public static void scrollPage(WebDriver dr,String pixel) {
+	JavascriptExecutor se=(JavascriptExecutor)dr;
+	se.executeScript("window.scrollBy(0,"+pixel+")");
+	
+}	
+	
+	
+	
+
+	// screenshot
+	public static String takeScreenShot(WebDriver dr, String failurmethodname) {
+		TakesScreenshot ts = (TakesScreenshot) dr;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String destination = System.getProperty("user.dir") + "\\screenshot\\" + System.currentTimeMillis()
+				+ failurmethodname + ".png";
+		try {
+			FileUtils.copyFile(source, new File(destination));
+		} catch (IOException e) {
+			log.info("ScreenShot not possible" + e.getMessage());
+		}
+		return destination;
+	}
+*/
+	
+}
