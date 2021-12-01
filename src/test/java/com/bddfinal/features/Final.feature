@@ -83,7 +83,7 @@ Scenario: Title of your scenario
       |expectedTitle|OSA Consulting Tech - All the projects.|
       #And I click on "btn_logout"
       #|id|btn_logout|
-      
+     
       
 #@facebook
   #Scenario: facebook

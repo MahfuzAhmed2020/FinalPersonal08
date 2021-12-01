@@ -32,6 +32,9 @@ public class Browser {
 			System.out.println("Browser is running on "+ os);
 			getBrowserForMac(browser);
 		}
+		/*WebDriverWait myWait=new WebDriverWait(dr, 1000);
+		myWait.until(ExpectedConditions.visibilityOfElementLocated(By.name("userName")));
+		*/
 		dr.manage().deleteAllCookies();
 		dr.manage().window().maximize();
 		
