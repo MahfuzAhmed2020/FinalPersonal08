@@ -1,7 +1,13 @@
 package com.osa.utilities;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 //import org.testng.Assert;
@@ -29,6 +35,19 @@ public class Utility {
 		}
 
 }
+	// screenshot
+		public static String takeScreenShot(WebDriver dr, String failurmethodname) {
+			TakesScreenshot ts = (TakesScreenshot) dr;
+			File source = ts.getScreenshotAs(OutputType.FILE);
+			String destination = System.getProperty("user.dir") + "\\screenshot\\" + System.currentTimeMillis()
+					+ failurmethodname + ".png";
+			try {
+				FileUtils.copyFile(source, new File(destination));
+			} catch (IOException e) {
+				log.info("ScreenShot not possible" + e.getMessage());
+			}
+			return destination;
+		}
 /*
 	
 	//Scrollpage
@@ -41,19 +60,7 @@ public static void scrollPage(WebDriver dr,String pixel) {
 	
 	
 
-	// screenshot
-	public static String takeScreenShot(WebDriver dr, String failurmethodname) {
-		TakesScreenshot ts = (TakesScreenshot) dr;
-		File source = ts.getScreenshotAs(OutputType.FILE);
-		String destination = System.getProperty("user.dir") + "\\screenshot\\" + System.currentTimeMillis()
-				+ failurmethodname + ".png";
-		try {
-			FileUtils.copyFile(source, new File(destination));
-		} catch (IOException e) {
-			log.info("ScreenShot not possible" + e.getMessage());
-		}
-		return destination;
-	}
+	
 */
 	
 }
